@@ -87,3 +87,39 @@
 |  Bumi Manusia      | 15/07    | -       | Dipinjam    |
 +--------------------------------------+
 ```
+
+
+## Wireframe: Halaman Registrasi anggota baru
+
+tugas 1: membuat wireframe baru
+```
++-----------------------------------------------------------------------+
+| SIMPUS-Mini                               Beranda | Buku | Login |    |
++-----------------------------------------------------------------------+
+|                                                                       |
+|                       Pendaftaran Anggota Baru                        |
+|                                                                       |
+| NIS / NIK        : [________________________]                         |
+| Nama Lengkap     : [________________________]                         |
+| Kelas / Jabatan  : [________________________]                         |
+| No. HP / WhatsApp: [________________________]                         |
+| Alamat           : [________________________]                         |
+|                                                                       |
+|                    [ Daftar Anggota ]                                 |
+|                                                                       |
++-----------------------------------------------------------------------+
+```
+
+
+
+## Wireframe: Halaman Registrasi anggota baru
+
+tugas 2: membuat userflow baru
+
+```
+[Petugas Login] -> [Dashboard Petugas] -> [Pilih menu "Riwayat / Transaksi"] 
+-> [Filter berdasarkan status "Terlambat / Menunggak"] 
+-> [Sistem menampilkan daftar transaksi yang lewat tanggal jatuh tempo] 
+-> [Petugas memilih nama Anggota] -> [Lihat detail tunggakan & total denda]
+```
+
