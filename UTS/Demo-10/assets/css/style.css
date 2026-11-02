@@ -1,0 +1,738 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*maskot */
+.mascot {
+    position: fixed;
+    right: 0;
+    padding: 1rem;
+    top: 20%;
+    width: 450px;
+    height: auto;
+    z-index: 999;
+    pointer-events: none;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+/*maskot */
+
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.5;
+    padding-top: 80px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../../asset_freaky/wp2195544-sonic-generations-wallpapers.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+
+    opacity: 0.40;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+a {
+    color: #00d315;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header & Navbar (Flexbox) ===== */
+header {
+
+    background-color: rgba(0, 211, 21, 0.564);
+
+    backdrop-filter: blur(12px);
+
+    color: #fff;
+    padding: 0.85rem 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 80%;
+    z-index: 1000;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.auth-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+}
+
+.auth-status a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ===== Main Layout ===== */
+
+
+
+section {
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: all ease 0.3s;
+    border-radius: 24px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+
+main {
+    max-width: 900px;
+    margin: 2rem 0 2rem 3rem;
+    padding: 0 1rem;
+}
+
+.a-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 211, 21, 0.2); /* Hijau transparan tema kaca */
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    margin-top: 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 211, 21, 0.4);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.a-index:hover {
+    background-color: #00d315;
+    color: #fff;
+    border-color: #00d315;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 211, 21, 0.35);
+}
+
+/* section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+} */
+
+section h2 {
+    margin-bottom: 0.5rem;
+    color: #00d315;
+    font-size: 2rem;
+}
+
+/* ===== Kartu Statistik (CSS Grid) ===== */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Efek kaca transparan */
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    /* Mengatur bentuk card menjadi vertical portrait */
+    padding: 2.5rem 1.25rem;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.30);
+    transition: all 0.3s ease;
+}
+
+/* Efek interaktif saat kursor mendekati kartu */
+main section:nth-of-type(2) article:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, angka 0.4);
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #00d315;
+    /* Warna hijau khas tema */
+    margin: 0;
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+thead {
+    background-color: rgba(0, 211, 21, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+thead th {
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 0.95rem;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Efek sorot kaca saat kursor di atas baris */
+}
+
+/* Tombol Aksi (Edit & Hapus) dalam Tabel */
+td {
+    vertical-align: middle;
+    /* Memastikan posisi isi sel sejajar di tengah */
+}
+
+/* Membungkus tombol agar sejajar ke samping (horizontal) */
+td form.form-hapus {
+    display: inline-block;
+    margin: 0;
+}
+
+td.aksi,
+th.aksi {
+    white-space: nowrap;
+    padding-left: 1.25rem;
+
+    padding-right: 1.25rem;
+    width: 200px;
+}
+
+/* Desain tombol Edit & Hapus yang rapi dan konsisten */
+td a.btn-edit,
+td form.form-hapus button,
+td button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.4rem;
+    border: none;
+    border-radius: 8px;
+    /* Sudut melengkung modern ala iOS */
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol Edit (Kuning/Oranye lembut) */
+td a.btn-edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+td a.btn-edit:hover {
+    background-color: #ec971f;
+    transform: translateY(-2px);
+}
+
+/* Tombol Hapus (Merah lembut) */
+td form.form-hapus button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+td form.form-hapus button:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px);
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 15px;
+    color: #00d315;
+    font-weight: 700;
+}
+
+.pagination a.active {
+    background-color: #00d315;
+    color: #fff;
+    border-color: #00d315;
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.search-box button {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #00d315;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===== Form ===== */
+orm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi form menjadi 2 kolom rapi */
+    gap: 1.25rem 1.5rem;
+}
+
+/* Membuat elemen tertentu (seperti Judul dan Tombol Simpan) melebar penuh 2 kolom */
+form p:nth-of-type(1),
+form p:nth-of-type(4),
+form p:last-of-type {
+    grid-column: span 2;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #e2e8f0; /* Warna putih lembut khas tema */
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+form input:not([type="checkbox"]),
+form select {
+    width: 100%;
+    max-width: 100%; /* Memenuhi lebar kontainer secara proporsional */
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.07); /* Latar belakang input transparan kaca */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi kaca tipis */
+    border-radius: 12px; /* Sudut melengkung modern */
+    color: #fff;
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+/* Mengubah warna teks placeholder agar terlihat jelas */
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Efek saat input diklik/fokus (menyala hijau tema) */
+form input:not([type="checkbox"]):focus,
+form select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00d315;
+    box-shadow: 0 0 12px rgba(0, 211, 21, 0.25);
+}
+
+/* Styling dropdown select agar senada */
+form select option {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+/* Tombol Simpan */
+form button[type="submit"] {
+    background-color: #00d315;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 211, 21, 0.3);
+    justify-self: start; /* Posisi tombol di sebelah kiri */
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #00b012;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 211, 21, 0.4);
+}
+
+/* ===== Footer ===== */
+.container_footer {
+    color: white;
+    position: relative;
+    font-family: 'Montserrat';
+    padding-top: 20px;
+}
+
+
+
+
+.container_footer .box {
+    width: 25.875em;
+    height: 3.875em;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ===== Footer End ===== */
+
+
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ===== Hamburger Menu (JS-driven) ===== */
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.85rem 1.2rem;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.flash-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #fff;
+}
+
+
+.flash-error {
+    background-color: rgba(217, 83, 79, 0.15);
+    /* Merah transparan */
+    border: 1px solid rgba(217, 83, 79, 0.3);
+    color: #fff;
+}
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+}
+
+/* ===== Styling Custom Modal Konfirmasi Hapus ===== */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.custom-modal-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 90%;
+    max-width: 380px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    /* Sudut halus ala iOS */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    animation: modalPopUp 0.3s ease-out;
+}
+
+@keyframes modalPopUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.custom-modal-box h3 {
+    color: #1d5b8a;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.custom-modal-box p {
+    color: #2b2b2b;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-modal-batal,
+.btn-modal-ya {
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-batal {
+    background-color: #e2e6ea;
+    color: #333;
+}
+
+.btn-modal-batal:hover {
+    background-color: #cbd3da;
+}
+
+.btn-modal-ya {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.btn-modal-ya:hover {
+    background-color: #c9302c;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah */
+@media (max-width: 1395px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    header nav.nav-open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+
+
+}
+
+@media (max-width: 1275px) {
+    main {
+        max-width: 100%;
+        /* Lebar konten memenuhi layar */
+        margin: 2rem auto;
+        /* Posisikan kembali ke tengah */
+        padding: 0 1rem;
+    }
+
+    /* Perkecil ukuran maskot atau sesuaikan posisinya agar tidak menutupi teks */
+    .mascot {
+        width: 160px;
+        /* Ukuran maskot diperkecil */
+        right: 20px;
+        top: 100px;
+    }
+}
+
+/* Ketika ukuran layar di bawah 768px (Handphone) */
+@media (max-width: 950px) {
+
+    /* Ubah kartu statistik ringkasan menjadi 1 kolom ke bawah */
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sembunyikan maskot di layar HP yang kecil agar konten teks tetap terbaca jelas */
+    .mascot {
+        display: none;
+    }
+
+    /* Sesuaikan padding container utama */
+    main {
+        margin: 2.5rem 0.5rem;
+        padding: 0 1rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        position: top;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}
+
+
+
+/* ===== RESPONSIVE DESIGN (UNTUK TABLET & HP) ===== */
+
+/* Ketika ukuran layar di bawah 992px (Tablet / Laptop kecil) */

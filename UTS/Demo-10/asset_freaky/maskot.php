@@ -1,0 +1,1 @@
+<img src="../asset_freaky/maskotGWEH-01.png" alt="Maskot SIMPUS-Mini" class="mascot">
